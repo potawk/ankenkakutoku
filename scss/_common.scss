@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+/*-----------------------------------------
+共通部分
+------------------------------------------*/
+html{
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body{
+	font-size: 1.6rem;
+	color: v.$text-color;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+ul{
+	list-style: none;
+}
+
+a{
+	text-decoration: none;
+}
+
+/*-----------------------------------------
+リンク
+------------------------------------------*/
+.nav-link{
+	color: v.$text-color;
+	text-decoration: none;
+}
+
+.nav-link.active{
+	color: v.$main-color;
+}

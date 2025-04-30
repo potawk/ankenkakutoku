@@ -1,0 +1,145 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.header-sp {
+  display: none;
+
+  @include m.tab{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+/* ハンバーガーメニューボタン(.hamburger-menu)のCSSを書いてください */
+.hamburger-menu {
+  display: block;
+  width: 35px;
+  height: 24px;
+  position: relative;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.4s;
+}
+/* ハンバーガーメニューボタンにカーソルを合わせた時のCSSを書いてください */
+.hamburger-menu:hover {
+  opacity: 0.5;
+}
+
+/* ハンバーガーメニューボタン内の3本線のCSSを書いてください */
+.hamburger-menu span {
+  width: 35px;
+  height: 1px;
+  background: v.$text-color;
+  position: absolute;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+
+/* それぞれの線の位置を指定するCSSを書いてください */
+.hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 23px;
+}
+
+/* ナビゲーションのCSSを書いてください */
+#hamburger-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  color: v.$text-color;
+	background: #fff;
+  z-index: 20;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+
+  .header__title {
+    margin-top: 64px;
+    margin-bottom: 24px;
+  }
+}
+
+.header__hr.header__hr-sp {
+  width: 292px;
+}
+
+/* ナビゲーション内のセクションのCSSを書いてください */
+.sections {
+  list-style: none;
+}
+
+/* セクション内のリストのCSSを書いてください */
+.hamburger-menu-section {
+  margin-bottom: 24px;
+
+  a {
+    color: v.$text-color;
+    font-weight: bold;
+    font-size: 16px;
+    font-family: v.$font-family;
+  }
+}
+
+.hamburger-menu-section.header__item-contact {
+  background: v.$main-color;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.75;
+  padding: 8px 0;
+  width: 292px;
+
+	a{
+		color: #fff;
+	}
+
+  &:hover {
+    background: #fff;
+    outline: 3px solid v.$main-color;
+    outline-offset: -3px;
+
+		a{
+			color: v.$main-color;
+		}
+  }
+}
+
+/* ナビゲーションを表示するためのCSSを書いてください */
+#hamburger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ナビゲーションが表示している時のボタンがXになるようCSSを書いてください */
+.hamburger-menu.active span:nth-child(1) {
+  top: 12px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.hamburger-menu.active span:nth-child(2),
+.hamburger-menu.active span:nth-child(3) {
+  top: 12px;
+  transform: rotate(45deg);
+}

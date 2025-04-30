@@ -1,0 +1,126 @@
+@charset "UTF-8";
+
+@use "variable" as v;
+@use "mixin" as m;
+
+.plan {
+  padding: 80px 0;
+
+  @include m.tab {
+    padding: 80px 20px;
+  }
+}
+
+.plan__tab {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  text-align: center;
+  font-family: v.$font-family;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #bbb;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  display: inline-block;
+  width: 280px;
+  border-bottom: 1px solid #bbb;
+  cursor: pointer;
+
+	@include m.tab{
+		width: calc((100% - 32px) / 3);
+	}
+
+  span {
+    @include m.tab {
+      display: block;
+    }
+  }
+}
+
+.tab-button.active {
+  color: v.$main-color;
+  border-bottom: 1px solid v.$main-color;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.plan__tab-img {
+  width: 70%;
+  margin: 0 auto 40px;
+
+	@include m.tab{
+		width: 100%;
+	}
+}
+
+.plan__tab-description {
+  width: 70%;
+  margin: 0 auto 40px;
+
+	@include m.tab{
+		width: 100%;
+	}
+}
+
+.plan__tab-head {
+  text-align: center;
+  font-family: v.$font-family;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  color: v.$main-color;
+  border-bottom: 1px solid v.$main-color;
+  margin-bottom: 10px;
+
+  span {
+    @include m.tab {
+      display: block;
+    }
+  }
+}
+
+.plan__tab-text{
+	line-height: 1.75;
+	letter-spacing: 0.08;
+
+	p:first-child{
+		margin-bottom: 10px;
+	}
+}
+
+.plan__btn {
+  background: v.$main-color;
+  color: #fff;
+  text-align: center;
+  font-family: v.$font-family;
+  font-weight: 600;
+  padding: 16px 0;
+  display: block;
+  width: 360px;
+  margin: auto;
+  transition: all 0.3s;
+
+	@include m.tab{
+		width: 81.8%;
+		max-width: 360px;
+	}
+
+  &:hover {
+    background: #fff;
+    color: v.$main-color;
+    outline: 3px solid v.$main-color;
+    outline-offset: -3px;
+  }
+}

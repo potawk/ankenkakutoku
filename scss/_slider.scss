@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+.pickup{
+	background: #F6F6F6;
+}
+
+.swiper{
+	width: 93.5%;
+	margin: auto;
+
+	@include m.tab{
+		width: 100%;
+	}
+}
+
+.pickup__slide-text{
+	padding-top: 16px;
+	min-height: 146px;
+	margin-bottom: 40px;
+}
+
+.pickup__slide-title{
+	font-family: v.$font-family;
+	font-weight: 600;
+	font-size: 1.8rem;
+	color: v.$main-color;
+	margin-bottom: 8px;
+	letter-spacing: 0.1;
+}
+
+.pickup__slide-description{
+	font-family: v.$sub-font-family;
+	color: v.$text-color;
+	letter-spacing: 0.1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active{
+	background: v.$main-color;
+}
+
+span.swiper-pagination-bullet{
+	width: 10px;
+	height: 10px;
+}

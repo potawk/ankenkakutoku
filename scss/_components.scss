@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+.section__title{
+	margin-bottom: 40px;
+}
+
+.section__title-main{
+	font-family: v.$title-font-family;
+	font-size: 3.6rem;
+	line-height: 1;
+	letter-spacing: 0.08;
+	color: v.$main-color;
+	text-align: center;
+}
+
+.section__title-sub{
+	font-family: v.$sub-font-family;
+	line-height: 1.75;
+	letter-spacing: 0.08;
+	color: v.$main-color;
+	text-align: center;
+}

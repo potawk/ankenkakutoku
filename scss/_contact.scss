@@ -1,0 +1,75 @@
+@charset "UTF-8";
+
+@use 'variable' as v;
+@use 'mixin' as m;
+
+.contact{
+	margin-bottom: 24px;
+}
+
+.contact-cta{
+	display: block;
+
+	@include m.tab{
+		display: none;
+	}
+}
+
+.contact-cta-sp{
+	display: none;
+
+	@include m.tab{
+		display: block;
+	}
+}
+
+.sns-cta{
+	display: flex;
+	justify-content: space-between;
+
+	@include m.tab{
+		display: block;
+	}
+}
+
+.instagram-cta{
+	@include m.tab{
+		margin-bottom: 24px;
+	}
+}
+
+.instagram-cta, .facebook-cta{
+	width: 48.9%;
+
+	@include m.tab{
+		width: 100%;
+	}
+}
+
+.instagram-cta img{
+	transition: display 0.5s ease;
+}
+
+.instagram-cta:hover .gray{
+	display: none;
+}
+
+.facebook-cta:hover .gray{
+	display: none;
+}
+
+.color{
+	display: none;
+}
+
+.instagram-cta:hover .color{
+	display: block;
+}
+
+.facebook-cta img{
+	transition: display 0.5s ease;
+}
+
+.facebook-cta:hover .color{
+	display: block;
+}

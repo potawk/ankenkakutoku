@@ -1,0 +1,902 @@
+@charset "UTF-8";
+/*-----------------------------------------
+共通部分
+------------------------------------------*/
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-size: 1.6rem;
+  color: #333;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/*-----------------------------------------
+リンク
+------------------------------------------*/
+.nav-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.nav-link.active {
+  color: #A88657;
+}
+
+.header {
+  text-align: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #fff;
+  z-index: 10;
+}
+
+.header__title-main,
+.header__title-sub {
+  display: block;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: bold;
+  line-height: 1;
+  color: #333;
+}
+
+.header__title-main {
+  font-size: 2.4rem;
+}
+
+.header__title-sub {
+  font-size: 2rem;
+  margin-bottom: 24px;
+}
+
+.header__hr {
+  width: 168px;
+  height: 1px;
+  background: #BBB;
+  margin: 0 auto 24px;
+}
+
+.header__item {
+  margin-bottom: 24px;
+}
+
+.header__item a {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: bold;
+  line-height: 1.75;
+  color: #333;
+}
+
+.header__item .header__item-contact {
+  color: #fff;
+  background: #A88657;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.75;
+  padding: 8px 0;
+  width: 168px;
+}
+.header__item .header__item-contact:hover {
+  background: #fff;
+  color: #A88657;
+  outline: 3px solid #A88657;
+  outline-offset: -3px;
+}
+
+.sns-list {
+  display: flex;
+  justify-content: center;
+}
+
+.sns-list .insta, .sns-list .facebook {
+  width: 40px;
+  height: 40px;
+  color: #A88657;
+}
+
+.insta {
+  margin-right: 24px;
+}
+
+.footer {
+  padding: 40px 0;
+}
+
+.footer__list {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer__list {
+    display: block;
+    margin-bottom: 24px;
+  }
+}
+
+.footer__title {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: bold;
+  font-size: 2.4rem;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+}
+@media screen and (max-width: 768px) {
+  .footer__title {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+}
+.footer__title a {
+  color: #333;
+}
+.footer__title a:hover {
+  color: #A88657;
+}
+
+.footer__items {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .footer__items {
+    justify-content: center;
+  }
+}
+
+.footer__item:not(:last-child) {
+  margin-right: 24px;
+}
+@media screen and (max-width: 768px) {
+  .footer__item:not(:last-child) {
+    margin-right: 14px;
+  }
+}
+.footer__item a {
+  color: #333;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: bold;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+}
+@media screen and (max-width: 768px) {
+  .footer__item a {
+    font-size: 1.4rem;
+  }
+}
+.footer__item a:hover {
+  color: #A88657;
+}
+
+.footer__hr {
+  margin-bottom: 24px;
+  background: #BBB;
+  height: 1px;
+  width: 100%;
+}
+
+.footer__copyright {
+  text-align: center;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.4rem;
+  line-height: 1.5;
+  letter-spacing: 0.08;
+}
+@media screen and (max-width: 768px) {
+  .footer__copyright {
+    font-size: 1.2rem;
+  }
+}
+
+.wholewrap {
+  display: flex;
+}
+
+.header {
+  width: 200px;
+}
+@media screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
+}
+
+.mainright {
+  width: calc(100% - 200px);
+  margin-left: auto;
+}
+@media screen and (max-width: 768px) {
+  .mainright {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.wrapper {
+  max-width: 920px;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .wrapper {
+    padding: 0 20px;
+  }
+}
+
+.pickup {
+  padding: 80px 0;
+}
+
+.sp-wrapper {
+  width: 100%;
+  padding: 0 20px;
+}
+
+/*-----------------------------------------
+メッセージ
+------------------------------------------*/
+@media screen and (max-width: 768px) {
+  .mainvisual {
+    margin-top: 80px;
+  }
+}
+
+.message {
+  padding: 40px 0;
+}
+
+.h2__line {
+  background: #333;
+  width: 1px;
+  height: 50px;
+  margin: auto;
+}
+
+.message__title {
+  font-family: "Zen Old Mincho", serif;
+  color: #333;
+  font-weight: normal;
+  font-size: 2.4rem;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  text-align: center;
+  margin-bottom: 24px;
+}
+@media screen and (max-width: 768px) {
+  .message__title span {
+    display: block;
+  }
+}
+
+.message__text {
+  font-family: "Zen Old Mincho", serif;
+  color: #333;
+  font-weight: normal;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .message__text span {
+    display: block;
+  }
+}
+
+.section__title {
+  margin-bottom: 40px;
+}
+
+.section__title-main {
+  font-family: "Pinyon Script", cursive;
+  font-size: 3.6rem;
+  line-height: 1;
+  letter-spacing: 0.08;
+  color: #A88657;
+  text-align: center;
+}
+
+.section__title-sub {
+  font-family: "Noto Sans JP", sans-serif;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  color: #A88657;
+  text-align: center;
+}
+
+.pickup {
+  background: #F6F6F6;
+}
+
+.swiper {
+  width: 93.5%;
+  margin: auto;
+}
+@media screen and (max-width: 768px) {
+  .swiper {
+    width: 100%;
+  }
+}
+
+.pickup__slide-text {
+  padding-top: 16px;
+  min-height: 146px;
+  margin-bottom: 40px;
+}
+
+.pickup__slide-title {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-size: 1.8rem;
+  color: #A88657;
+  margin-bottom: 8px;
+  letter-spacing: 0.1;
+}
+
+.pickup__slide-description {
+  font-family: "Noto Sans JP", sans-serif;
+  color: #333;
+  letter-spacing: 0.1;
+}
+
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: #A88657;
+}
+
+span.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+}
+
+.plan {
+  padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  .plan {
+    padding: 80px 20px;
+  }
+}
+
+.plan__tab {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  margin-bottom: 40px;
+}
+
+.tab-button {
+  text-align: center;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: bold;
+  font-size: 1.8rem;
+  color: #bbb;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  display: inline-block;
+  width: 280px;
+  border-bottom: 1px solid #bbb;
+  cursor: pointer;
+}
+@media screen and (max-width: 768px) {
+  .tab-button {
+    width: calc((100% - 32px) / 3);
+  }
+}
+@media screen and (max-width: 768px) {
+  .tab-button span {
+    display: block;
+  }
+}
+
+.tab-button.active {
+  color: #A88657;
+  border-bottom: 1px solid #A88657;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.plan__tab-img {
+  width: 70%;
+  margin: 0 auto 40px;
+}
+@media screen and (max-width: 768px) {
+  .plan__tab-img {
+    width: 100%;
+  }
+}
+
+.plan__tab-description {
+  width: 70%;
+  margin: 0 auto 40px;
+}
+@media screen and (max-width: 768px) {
+  .plan__tab-description {
+    width: 100%;
+  }
+}
+
+.plan__tab-head {
+  text-align: center;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  color: #A88657;
+  border-bottom: 1px solid #A88657;
+  margin-bottom: 10px;
+}
+@media screen and (max-width: 768px) {
+  .plan__tab-head span {
+    display: block;
+  }
+}
+
+.plan__tab-text {
+  line-height: 1.75;
+  letter-spacing: 0.08;
+}
+.plan__tab-text p:first-child {
+  margin-bottom: 10px;
+}
+
+.plan__btn {
+  background: #A88657;
+  color: #fff;
+  text-align: center;
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  padding: 16px 0;
+  display: block;
+  width: 360px;
+  margin: auto;
+  transition: all 0.3s;
+}
+@media screen and (max-width: 768px) {
+  .plan__btn {
+    width: 81.8%;
+    max-width: 360px;
+  }
+}
+.plan__btn:hover {
+  background: #fff;
+  color: #A88657;
+  outline: 3px solid #A88657;
+  outline-offset: -3px;
+}
+
+.feature {
+  background: #F6F6F6;
+  padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  .feature {
+    padding: 64px 0;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .feature__list {
+    width: 100%;
+  }
+}
+
+.feature__item {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .feature__item {
+    width: 100%;
+  }
+}
+.feature__item:not(:last-child) {
+  margin-bottom: 160px;
+}
+@media screen and (max-width: 768px) {
+  .feature__item:not(:last-child) {
+    margin-bottom: 40px;
+  }
+}
+
+.feature__item-img {
+  width: 54%;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .feature__item-img {
+    width: 100%;
+  }
+}
+
+.feature__item-img-reverse {
+  width: 54%;
+  margin: 0 0 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .feature__item-img-reverse {
+    width: 100%;
+  }
+}
+
+.feature__item-text {
+  width: 54%;
+  z-index: 10;
+  position: absolute;
+  top: 32%;
+  right: 0;
+  background: #fff;
+  padding: 58px 16px;
+  min-height: 280px;
+}
+@media screen and (max-width: 768px) {
+  .feature__item-text {
+    width: 100%;
+    position: static;
+    padding: 24px 16px;
+    min-height: 0;
+  }
+}
+
+.feature__item-text-reverse {
+  width: 54%;
+  z-index: 10;
+  background: #fff;
+  padding: 58px 16px;
+  min-height: 280px;
+  position: absolute;
+  top: 32%;
+  left: 0;
+}
+@media screen and (max-width: 768px) {
+  .feature__item-text-reverse {
+    width: 100%;
+    position: static;
+    padding: 24px 16px;
+    min-height: 0;
+  }
+}
+
+.feature__item-title {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #A88657;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+  text-align: center;
+  margin-bottom: 17px;
+}
+
+.feature__item-description {
+  font-family: "Zen Old Mincho", serif;
+  color: #333;
+  line-height: 1.75;
+  letter-spacing: 0.08;
+}
+
+.gallery {
+  padding: 80px 0;
+}
+@media screen and (max-width: 768px) {
+  .gallery {
+    padding: 64px 0;
+  }
+}
+
+.row1, .row2, .row3 {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 16px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.thumbnail {
+  width: auto;
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 1;
+  max-width: 100%;
+  margin-bottom: 16px;
+}
+
+.row1 .thumbnail {
+  height: 153px;
+}
+
+.row2 .thumbnail {
+  height: 282px;
+}
+
+.row3 .thumbnail {
+  height: 153px;
+}
+
+.thumbnail:hover {
+  outline: 8px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -8px;
+  transform: scale(1.05);
+  transition: all 0.3s;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: calc(200px + (100% - 200px) / 2);
+  transform: translate(-50%, -50%);
+  width: 50%;
+  z-index: 20;
+  outline: 8px solid rgba(255, 255, 255, 0.6);
+  outline-offset: -8px;
+}
+@media screen and (max-width: 768px) {
+  .modal-content {
+    top: calc(80px + (100% - 80px) / 2);
+    left: 50%;
+  }
+}
+.modal-content img {
+  width: 100%;
+  aspect-ratio: 788/525;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+.modal-background {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: calc(100% - 200px);
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 10;
+}
+@media screen and (max-width: 768px) {
+  .modal-background {
+    width: 100%;
+  }
+}
+
+.closeModalBtn img {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  top: -53px;
+  right: 0;
+  z-index: 20;
+}
+
+.contact {
+  margin-bottom: 24px;
+}
+
+.contact-cta {
+  display: block;
+}
+@media screen and (max-width: 768px) {
+  .contact-cta {
+    display: none;
+  }
+}
+
+.contact-cta-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .contact-cta-sp {
+    display: block;
+  }
+}
+
+.sns-cta {
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 768px) {
+  .sns-cta {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .instagram-cta {
+    margin-bottom: 24px;
+  }
+}
+
+.instagram-cta, .facebook-cta {
+  width: 48.9%;
+}
+@media screen and (max-width: 768px) {
+  .instagram-cta, .facebook-cta {
+    width: 100%;
+  }
+}
+
+.instagram-cta img {
+  transition: display 0.5s ease;
+}
+
+.instagram-cta:hover .gray {
+  display: none;
+}
+
+.facebook-cta:hover .gray {
+  display: none;
+}
+
+.color {
+  display: none;
+}
+
+.instagram-cta:hover .color {
+  display: block;
+}
+
+.facebook-cta img {
+  transition: display 0.5s ease;
+}
+
+.facebook-cta:hover .color {
+  display: block;
+}
+
+.header-sp {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .header-sp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 80px;
+    background: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+  }
+}
+
+/* ハンバーガーメニューボタン(.hamburger-menu)のCSSを書いてください */
+.hamburger-menu {
+  display: block;
+  width: 35px;
+  height: 24px;
+  position: relative;
+  z-index: 30;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+/* ハンバーガーメニューボタンにカーソルを合わせた時のCSSを書いてください */
+.hamburger-menu:hover {
+  opacity: 0.5;
+}
+
+/* ハンバーガーメニューボタン内の3本線のCSSを書いてください */
+.hamburger-menu span {
+  width: 35px;
+  height: 1px;
+  background: #333;
+  position: absolute;
+  left: 0;
+  transition: 0.4s ease-in-out;
+}
+
+/* それぞれの線の位置を指定するCSSを書いてください */
+.hamburger-menu span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger-menu span:nth-child(2) {
+  top: 11px;
+}
+
+.hamburger-menu span:nth-child(3) {
+  top: 23px;
+}
+
+/* ナビゲーションのCSSを書いてください */
+#hamburger-navigation {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0 20px;
+  color: #333;
+  background: #fff;
+  z-index: 20;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.8s ease, visibility 0.8s ease;
+}
+#hamburger-navigation .header__title {
+  margin-top: 64px;
+  margin-bottom: 24px;
+}
+
+.header__hr.header__hr-sp {
+  width: 292px;
+}
+
+/* ナビゲーション内のセクションのCSSを書いてください */
+.sections {
+  list-style: none;
+}
+
+/* セクション内のリストのCSSを書いてください */
+.hamburger-menu-section {
+  margin-bottom: 24px;
+}
+.hamburger-menu-section a {
+  color: #333;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: "Zen Old Mincho", serif;
+}
+
+.hamburger-menu-section.header__item-contact {
+  background: #A88657;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.75;
+  padding: 8px 0;
+  width: 292px;
+}
+.hamburger-menu-section.header__item-contact a {
+  color: #fff;
+}
+.hamburger-menu-section.header__item-contact:hover {
+  background: #fff;
+  outline: 3px solid #A88657;
+  outline-offset: -3px;
+}
+.hamburger-menu-section.header__item-contact:hover a {
+  color: #A88657;
+}
+
+/* ナビゲーションを表示するためのCSSを書いてください */
+#hamburger-navigation.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ナビゲーションが表示している時のボタンがXになるようCSSを書いてください */
+.hamburger-menu.active span:nth-child(1) {
+  top: 12px;
+  left: 0;
+  transform: rotate(-45deg);
+}
+
+.hamburger-menu.active span:nth-child(2),
+.hamburger-menu.active span:nth-child(3) {
+  top: 12px;
+  transform: rotate(45deg);
+}/*# sourceMappingURL=style.css.map */
