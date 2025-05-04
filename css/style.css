@@ -15,6 +15,7 @@ body {
 img {
   width: 100%;
   height: auto;
+  vertical-align: bottom;
 }
 
 ul {
@@ -44,6 +45,7 @@ a {
   top: 0;
   background: #fff;
   z-index: 10;
+  padding-top: 40px;
 }
 
 .header__title-main,
@@ -57,11 +59,18 @@ a {
 
 .header__title-main {
   font-size: 2.4rem;
+  letter-spacing: 0.08em;
 }
 
 .header__title-sub {
   font-size: 2rem;
   margin-bottom: 24px;
+  letter-spacing: 0.08em;
+}
+@media screen and (max-width: 768px) {
+  .header__title-sub {
+    margin-bottom: 0;
+  }
 }
 
 .header__hr {
@@ -80,6 +89,7 @@ a {
   font-weight: bold;
   line-height: 1.75;
   color: #333;
+  letter-spacing: 0.08em;
 }
 
 .header__item .header__item-contact {
@@ -114,13 +124,14 @@ a {
 }
 
 .footer {
-  padding: 40px 0;
+  padding: 36px 0;
 }
 
 .footer__list {
   display: flex;
   justify-content: space-between;
   margin-bottom: 24px;
+  align-items: center;
 }
 @media screen and (max-width: 768px) {
   .footer__list {
@@ -134,7 +145,7 @@ a {
   font-weight: bold;
   font-size: 2.4rem;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
 }
 @media screen and (max-width: 768px) {
   .footer__title {
@@ -172,7 +183,7 @@ a {
   font-family: "Zen Old Mincho", serif;
   font-weight: bold;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.07em;
 }
 @media screen and (max-width: 768px) {
   .footer__item a {
@@ -195,7 +206,7 @@ a {
   font-family: "Noto Sans JP", sans-serif;
   font-size: 1.4rem;
   line-height: 1.5;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
 }
 @media screen and (max-width: 768px) {
   .footer__copyright {
@@ -240,6 +251,11 @@ a {
 .pickup {
   padding: 80px 0;
 }
+@media screen and (max-width: 768px) {
+  .pickup {
+    padding: 63px 0 55px;
+  }
+}
 
 .sp-wrapper {
   width: 100%;
@@ -249,6 +265,12 @@ a {
 /*-----------------------------------------
 メッセージ
 ------------------------------------------*/
+.mainvisual video {
+  width: 100%;
+  height: 700px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 @media screen and (max-width: 768px) {
   .mainvisual {
     margin-top: 80px;
@@ -272,7 +294,7 @@ a {
   font-weight: normal;
   font-size: 2.4rem;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
   text-align: center;
   margin-bottom: 24px;
 }
@@ -287,7 +309,7 @@ a {
   color: #333;
   font-weight: normal;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
   text-align: center;
 }
 @media screen and (max-width: 768px) {
@@ -304,15 +326,16 @@ a {
   font-family: "Pinyon Script", cursive;
   font-size: 3.6rem;
   line-height: 1;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
   color: #A88657;
   text-align: center;
 }
 
 .section__title-sub {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
   color: #A88657;
   text-align: center;
 }
@@ -331,10 +354,19 @@ a {
   }
 }
 
+.swiper-img img {
+  vertical-align: bottom;
+}
+
 .pickup__slide-text {
   padding-top: 16px;
   min-height: 146px;
   margin-bottom: 40px;
+}
+@media screen and (max-width: 768px) {
+  .pickup__slide-text {
+    padding-top: 20px;
+  }
 }
 
 .pickup__slide-title {
@@ -343,13 +375,14 @@ a {
   font-size: 1.8rem;
   color: #A88657;
   margin-bottom: 8px;
-  letter-spacing: 0.1;
+  letter-spacing: 0.1em;
+  line-height: 1;
 }
 
 .pickup__slide-description {
   font-family: "Noto Sans JP", sans-serif;
   color: #333;
-  letter-spacing: 0.1;
+  letter-spacing: 0.1em;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active {
@@ -362,12 +395,20 @@ span.swiper-pagination-bullet {
 }
 
 .plan {
-  padding: 80px 0;
+  padding: 75px 0;
 }
 @media screen and (max-width: 768px) {
   .plan {
-    padding: 80px 20px;
+    padding: 65px 20px;
   }
+}
+
+.plan .wrapper {
+  padding: 0;
+}
+
+.plan__title {
+  margin-bottom: 46px;
 }
 
 .plan__tab {
@@ -383,8 +424,8 @@ span.swiper-pagination-bullet {
   font-weight: bold;
   font-size: 1.8rem;
   color: #bbb;
-  line-height: 1.75;
-  letter-spacing: 0.08;
+  line-height: 2;
+  letter-spacing: 0.08em;
   display: inline-block;
   width: 280px;
   border-bottom: 1px solid #bbb;
@@ -393,6 +434,7 @@ span.swiper-pagination-bullet {
 @media screen and (max-width: 768px) {
   .tab-button {
     width: calc((100% - 32px) / 3);
+    font-size: 1.4rem;
   }
 }
 @media screen and (max-width: 768px) {
@@ -440,7 +482,7 @@ span.swiper-pagination-bullet {
   font-weight: 600;
   font-size: 2rem;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
   color: #A88657;
   border-bottom: 1px solid #A88657;
   margin-bottom: 10px;
@@ -450,10 +492,15 @@ span.swiper-pagination-bullet {
     display: block;
   }
 }
+@media screen and (max-width: 768px) {
+  .plan__tab-head span:last-child {
+    line-height: 2.2;
+  }
+}
 
 .plan__tab-text {
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
 }
 .plan__tab-text p:first-child {
   margin-bottom: 10px;
@@ -469,6 +516,9 @@ span.swiper-pagination-bullet {
   display: block;
   width: 360px;
   margin: auto;
+  font-size: 2rem;
+  line-height: 1.5;
+  letter-spacing: 0.08em;
   transition: all 0.3s;
 }
 @media screen and (max-width: 768px) {
@@ -486,7 +536,7 @@ span.swiper-pagination-bullet {
 
 .feature {
   background: #F6F6F6;
-  padding: 80px 0;
+  padding: 87px 0 84px;
 }
 @media screen and (max-width: 768px) {
   .feature {
@@ -541,7 +591,7 @@ span.swiper-pagination-bullet {
   width: 54%;
   z-index: 10;
   position: absolute;
-  top: 32%;
+  top: 38%;
   right: 0;
   background: #fff;
   padding: 58px 16px;
@@ -560,10 +610,10 @@ span.swiper-pagination-bullet {
   width: 54%;
   z-index: 10;
   background: #fff;
-  padding: 58px 16px;
+  padding: 62px 16px;
   min-height: 280px;
   position: absolute;
-  top: 32%;
+  top: 38%;
   left: 0;
 }
 @media screen and (max-width: 768px) {
@@ -581,25 +631,50 @@ span.swiper-pagination-bullet {
   font-size: 2rem;
   color: #A88657;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
   text-align: center;
   margin-bottom: 17px;
+}
+@media screen and (max-width: 768px) {
+  .feature__item-title {
+    margin-bottom: 10px;
+  }
+}
+
+.feature__item-title-reverse {
+  font-family: "Zen Old Mincho", serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #A88657;
+  line-height: 1.75;
+  letter-spacing: 0.08em;
+  text-align: center;
+  margin-bottom: 27px;
+}
+@media screen and (max-width: 768px) {
+  .feature__item-title-reverse {
+    margin-bottom: 15px;
+  }
 }
 
 .feature__item-description {
   font-family: "Zen Old Mincho", serif;
   color: #333;
   line-height: 1.75;
-  letter-spacing: 0.08;
+  letter-spacing: 0.08em;
 }
 
 .gallery {
-  padding: 80px 0;
+  padding: 80px 0 63px;
 }
 @media screen and (max-width: 768px) {
   .gallery {
-    padding: 64px 0;
+    padding: 70px 0 58px;
   }
+}
+
+.flex-item {
+  display: flex;
 }
 
 .row1, .row2, .row3 {
@@ -609,6 +684,11 @@ span.swiper-pagination-bullet {
   justify-content: space-between;
   align-items: center;
 }
+@media screen and (max-width: 768px) {
+  .row1, .row2, .row3 {
+    gap: 8px;
+  }
+}
 
 .thumbnail {
   width: auto;
@@ -617,18 +697,39 @@ span.swiper-pagination-bullet {
   flex-shrink: 1;
   max-width: 100%;
   margin-bottom: 16px;
+  vertical-align: bottom;
+}
+@media screen and (max-width: 768px) {
+  .thumbnail {
+    margin-bottom: 8px;
+  }
 }
 
 .row1 .thumbnail {
   height: 153px;
 }
+@media screen and (max-width: 768px) {
+  .row1 .thumbnail {
+    height: 90px;
+  }
+}
 
 .row2 .thumbnail {
   height: 282px;
 }
+@media screen and (max-width: 768px) {
+  .row2 .thumbnail {
+    height: 120px;
+  }
+}
 
 .row3 .thumbnail {
   height: 153px;
+}
+@media screen and (max-width: 768px) {
+  .row3 .thumbnail {
+    height: 90px;
+  }
 }
 
 .thumbnail:hover {
@@ -732,6 +833,12 @@ span.swiper-pagination-bullet {
 @media screen and (max-width: 768px) {
   .instagram-cta, .facebook-cta {
     width: 100%;
+    height: 200px;
+  }
+  .instagram-cta img, .facebook-cta img {
+    height: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 

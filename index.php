@@ -51,7 +51,7 @@
 		</nav>
 	</header>
 	<div class="mainvisual">
-		<video width="100%" autoplay muted loop playsinline src="<?php echo get_template_directory_uri() ?>/img/mainvisual.mp4" alt="movie">
+		<video autoplay muted loop playsinline src="<?php echo get_template_directory_uri() ?>/img/mainvisual.mp4" alt="movie">
 	</div>
 
 	<section id="message" class="wrapper message">
@@ -86,7 +86,7 @@
 						<div class="swiper-slide">
 							<a href="#">
 								<?php if (has_post_thumbnail()): ?>
-									<figure>
+									<figure class="swiper-img">
 										<?php the_post_thumbnail(); ?>
 									</figure>
 								<?php endif; ?>
@@ -107,7 +107,7 @@
 
 	<section id="plan" class="plan content-section">
 		<div class="wrapper">
-			<h2 class="section__title">
+			<h2 class="plan__title">
 				<p class="section__title-main">Plan</p>
 				<p class="section__title-sub">プラン</p>
 			</h2>
@@ -201,7 +201,7 @@
 						<img src="<?php echo get_template_directory_uri() ?>/img/feature2.jpg" alt="feature2">
 					</div>
 					<div class="feature__item-text-reverse">
-						<h3 class="feature__item-title">季節ごとの自然の美しさを満喫</h3>
+						<h3 class="feature__item-title-reverse">季節ごとの自然の美しさを満喫</h3>
 						<p class="feature__item-description">
 							春には桜並木や新緑の森、夏には青い海と白い砂浜、秋には紅葉の美しい風景、冬には幻想的な雪景色など、四季折々の魅力的な背景で思い出に残る写真を撮影します。
 						</p>

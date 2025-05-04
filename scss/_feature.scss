@@ -5,7 +5,7 @@
 
 .feature{
 	background: #F6F6F6;
-	padding: 80px 0;
+	padding: 87px 0 84px;
 
 	@include m.tab{
 		padding: 64px 0;
@@ -56,7 +56,7 @@
 	width: 54%;
 	z-index: 10;
 	position: absolute;
-	top: 32%;
+	top: 38%;
 	right: 0;
 	background: #fff;
 	padding: 58px 16px;
@@ -74,10 +74,10 @@
 	width: 54%;
 	z-index: 10;
 	background: #fff;
-	padding: 58px 16px;
+	padding: 62px 16px;
 	min-height: 280px;
 	position: absolute;
-	top: 32%;
+	top: 38%;
 	left: 0;
 
 	@include m.tab{
@@ -94,14 +94,33 @@
 	font-size: 2rem;
 	color: v.$main-color;
 	line-height: 1.75;
-	letter-spacing: 0.08;
+	letter-spacing: 0.08em;
 	text-align: center;
 	margin-bottom: 17px;
+
+	@include m.tab{
+		margin-bottom: 10px;
+	}
+}
+
+.feature__item-title-reverse{
+	font-family: v.$font-family;
+	font-weight: 600;
+	font-size: 2rem;
+	color: v.$main-color;
+	line-height: 1.75;
+	letter-spacing: 0.08em;
+	text-align: center;
+	margin-bottom: 27px;
+
+	@include m.tab{
+		margin-bottom: 15px;
+	}
 }
 
 .feature__item-description{
 	font-family: v.$font-family;
 	color: v.$text-color;
 	line-height: 1.75;
-	letter-spacing: 0.08;
+	letter-spacing: 0.08em;
 }

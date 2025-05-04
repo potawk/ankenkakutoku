@@ -4,11 +4,15 @@
 @use 'mixin' as m;
 
 .gallery{
-	padding: 80px 0;
+	padding: 80px 0 63px;
 
 	@include m.tab{
-		padding: 64px 0;
+		padding: 70px 0 58px;
 	}
+}
+
+.flex-item{
+	display: flex;
 }
 
 .row1, .row2, .row3{
@@ -17,6 +21,10 @@
 	gap: 16px;
 	justify-content: space-between;
 	align-items: center;
+
+	@include m.tab{
+		gap: 8px;
+	}
 }
 
 .thumbnail{
@@ -25,18 +33,35 @@
 	flex-shrink: 1;
 	max-width: 100%;
 	margin-bottom: 16px;
+	vertical-align: bottom;
+
+	@include m.tab{
+		margin-bottom: 8px;
+	}
 }
 
 .row1 .thumbnail{
 	height: 153px;
+
+	@include m.tab{
+		height: 90px;
+	}
 }
 
 .row2 .thumbnail{
 	height: 282px;
+
+	@include m.tab{
+		height: 120px;
+	}
 }
 
 .row3 .thumbnail{
 	height: 153px;
+
+	@include m.tab{
+		height: 90px;
+	}
 }
 
 .thumbnail{

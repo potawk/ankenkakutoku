@@ -10,6 +10,7 @@
 	top: 0;
 	background: #fff;
 	z-index: 10;
+	padding-top: 40px;
 }
 
 .header__title-main,
@@ -23,11 +24,17 @@
 
 .header__title-main{
 	font-size: 2.4rem;
+	letter-spacing: 0.08em;
 }
 
 .header__title-sub{
 	font-size: 2rem;
 	margin-bottom: 24px;
+	letter-spacing: 0.08em;
+
+	@include m.tab{
+		margin-bottom: 0;
+	}
 }
 
 .header__hr{
@@ -46,6 +53,7 @@
 	font-weight: bold;
 	line-height: 1.75;
 	color: v.$text-color;
+	letter-spacing: 0.08em;
 }
 
 .header__item .header__item-contact{

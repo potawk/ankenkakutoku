@@ -4,13 +4,14 @@
 @use 'mixin' as m;
 
 .footer{
-	padding: 40px 0;
+	padding: 36px 0;
 }
 
 .footer__list{
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 24px;
+	align-items: center;
 
 	@include m.tab{
 		display: block;
@@ -23,7 +24,7 @@
 	font-weight: bold;
 	font-size: 2.4rem;
 	line-height: 1.75;
-	letter-spacing: 0.08;
+	letter-spacing: 0.08em;
 
 	@include m.tab{
 		text-align: center;
@@ -62,7 +63,7 @@
 		font-family: v.$font-family;
 		font-weight: bold;
 		line-height: 1.75;
-		letter-spacing: 0.08;
+		letter-spacing: 0.07em;
 
 		@include m.tab{
 			font-size: 1.4rem;
@@ -86,7 +87,7 @@
 	font-family: v.$sub-font-family;
 	font-size: 1.4rem;
 	line-height: 1.5;
-	letter-spacing: 0.08;
+	letter-spacing: 0.08em;
 
 	@include m.tab{
 		font-size: 1.2rem;

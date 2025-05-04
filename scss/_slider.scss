@@ -16,10 +16,18 @@
 	}
 }
 
+.swiper-img img{
+	vertical-align: bottom;
+}
+
 .pickup__slide-text{
 	padding-top: 16px;
 	min-height: 146px;
 	margin-bottom: 40px;
+
+	@include m.tab{
+		padding-top: 20px;
+	}
 }
 
 .pickup__slide-title{
@@ -28,13 +36,14 @@
 	font-size: 1.8rem;
 	color: v.$main-color;
 	margin-bottom: 8px;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1em;
+	line-height: 1;
 }
 
 .pickup__slide-description{
 	font-family: v.$sub-font-family;
 	color: v.$text-color;
-	letter-spacing: 0.1;
+	letter-spacing: 0.1em;
 }
 
 .swiper-pagination-bullet.swiper-pagination-bullet-active{

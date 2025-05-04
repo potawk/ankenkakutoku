@@ -11,15 +11,16 @@
 	font-family: v.$title-font-family;
 	font-size: 3.6rem;
 	line-height: 1;
-	letter-spacing: 0.08;
+	letter-spacing: 0.08em;
 	color: v.$main-color;
 	text-align: center;
 }
 
 .section__title-sub{
 	font-family: v.$sub-font-family;
+	font-size: 1.6rem;
 	line-height: 1.75;
-	letter-spacing: 0.08;
+	letter-spacing: 0.08em;
 	color: v.$main-color;
 	text-align: center;
 }
